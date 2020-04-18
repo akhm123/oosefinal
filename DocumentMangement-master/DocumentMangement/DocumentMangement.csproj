@@ -145,9 +145,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="Migrations\202003080837307_init.cs" />
-    <Compile Include="Migrations\202003080837307_init.designer.cs">
-      <DependentUpon>202003080837307_init.cs</DependentUpon>
+    <Compile Include="Migrations\202004181539448_init.cs" />
+    <Compile Include="Migrations\202004181539448_init.designer.cs">
+      <DependentUpon>202004181539448_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContextclass.cs" />
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003080837307_init.resx">
-      <DependentUpon>202003080837307_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004181539448_init.resx">
+      <DependentUpon>202004181539448_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

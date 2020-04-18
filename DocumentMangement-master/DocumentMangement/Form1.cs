@@ -23,9 +23,9 @@ namespace DocumentMangement
             DbContextclass db = new DbContextclass();
 
             User user = new User();
-            user.Name = textBox1.Text.ToString();
+            user.UserName = textBox1.Text.ToString();
             user.Password = textBox2.Text.ToString();
-            var k = db.users.Where((s) => s.Name == user.Name && s.Password == user.Password)
+            var k = db.users.Where((s) => s.UserName == user.UserName && s.Password == user.Password)
                 .FirstOrDefault();
 
             if (k == null)
@@ -33,7 +33,7 @@ namespace DocumentMangement
             else
             {
                 //textBox1.Text = user.Name;
-               // Global.username = user.Name;
+                Global.username = user.UserName;
                 //db.users.Add(user);
                 //db.SaveChanges();
                 // DocumentUpload obj1 = new DocumentUpload();

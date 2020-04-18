@@ -13,7 +13,7 @@ namespace DocumentMangement.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202003080837307_init"; }
+            get { return "202004181539448_init"; }
         }
         
         string IMigrationMetadata.Source

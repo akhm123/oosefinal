@@ -15,7 +15,7 @@ namespace DocumentMangement
         public CostEstmation()
         {
             InitializeComponent();
-            button1.Hide();
+            //button1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -23,7 +23,7 @@ namespace DocumentMangement
             int count = Int32.Parse(textBox1.Text);
             int cost = Int32.Parse(textBox2.Text);
 
-            label3.Text = (cost * count).ToString();
+            label3.Text ="Your cost is :"+ (cost * count).ToString();
 
             if (cost * count < 10000)
             {
@@ -38,7 +38,12 @@ namespace DocumentMangement
             {
                 label4.Text = "We recommend you to use our platinum plan";
             }
-            button1.Show();
+            //button1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

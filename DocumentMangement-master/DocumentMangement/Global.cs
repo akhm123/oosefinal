@@ -9,5 +9,7 @@ namespace DocumentMangement
     class Global
     {
         public static string username { get; set; }
+
+        public static string link { get; set; } 
     }
 }

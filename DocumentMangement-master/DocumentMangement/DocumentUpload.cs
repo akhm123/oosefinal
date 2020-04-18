@@ -13,6 +13,8 @@ namespace DocumentMangement
 {
     public partial class DocumentUpload : Form
     {
+        string intp;
+        string path;
         public DocumentUpload()
         {
            
@@ -31,8 +33,13 @@ namespace DocumentMangement
                 {
                     if (openFileDialog1.CheckFileExists)
                     {
-                        string path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
+                        path = System.IO.Path.GetFullPath(openFileDialog1.FileName);
                         label1.Text = path;
+                    }
+                    for(int i=path.Length-1;i>=0;i--)
+                    {
+                        if (path[i] == '.')
+                            intp = path.Substring(i + 1);
                     }
                 }
                 else
@@ -58,14 +65,15 @@ namespace DocumentMangement
                 }
                 else
                 {
-                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                   // string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                     Document d = new Document();
                     {
                         d.Name = filename;
-                        d.Url = "file";
-                        d.UserId = int.Parse(textBox2.Text);
-
-                        d.IsSharable = checkBox1.Checked;
+                        d.Url = path;
+                        d.UserName =Global.username;
+                        d.Type = intp;
+                        label3.Text = path;
+                        d.IsSharable = IsSharable.Checked;
                         d.IsStarred = checkBox2.Checked;
                     };
                     db.document.Add(d);

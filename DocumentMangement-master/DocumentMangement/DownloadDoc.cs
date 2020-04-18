@@ -16,7 +16,11 @@ namespace DocumentMangement
     {
         public DownloadDoc()
         {
+          
+
             InitializeComponent();
+            label2.Hide();
+            progressBar1.Hide();
         }
         WebClient client;
       
@@ -49,7 +53,11 @@ namespace DocumentMangement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string url = textBox1.Text;
+           // Global.link = senderGrid.Rows[r].Cells[5].Value.ToString();
+            string url = Global.link;
+            progressBar1.Show();
+            label2.Show();
+
             if (!string.IsNullOrEmpty(url))
             {
                 Thread thread = new Thread(() =>
@@ -60,6 +68,23 @@ namespace DocumentMangement
                 });
                 thread.Start();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            viewallfile v = new viewallfile();
+            v.Show();
+            this.Hide();
         }
     }
 }

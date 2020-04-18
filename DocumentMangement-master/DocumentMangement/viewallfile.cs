@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,6 +22,7 @@ namespace DocumentMangement
 
 
             var customers = from p in db.document
+                            where p.UserName == Global.username
                             select p;
             dataGridView1.DataSource = customers.ToList();
                 
@@ -54,14 +57,26 @@ namespace DocumentMangement
         {
 
             var senderGrid = (DataGridView)sender;
+            string s;
+            int r = senderGrid.CurrentCell.RowIndex;
+            int c = senderGrid.CurrentCell.ColumnIndex;
+
+            if(c==0)
+            {
+                Global.link = senderGrid.Rows[r].Cells[5].Value.ToString();
+                label1.Text = Global.link;
+                DownloadDoc obj = new DownloadDoc();
+                obj.Show();
+                this.Hide();
+            }
 
             if (senderGrid.CurrentCell is DataGridViewCheckBoxCell &&
                 e.RowIndex >= 0)
             {
                 //DataGridViewCheckBoxCell cell = row.Cells[0] as DataGridViewCheckBoxCell;
-                int r = senderGrid.CurrentCell.RowIndex;
-                int c = senderGrid.CurrentCell.ColumnIndex;
-                string s = senderGrid.Rows[r].Cells[1].Value.ToString();
+                r = senderGrid.CurrentCell.RowIndex;
+                c = senderGrid.CurrentCell.ColumnIndex;
+                s = senderGrid.Rows[r].Cells[1].Value.ToString();
                 if ((bool)senderGrid.CurrentCell.Value)
                 {
                     //if (senderGrid.Columns[e.ColumnIndex].va)
@@ -105,6 +120,18 @@ namespace DocumentMangement
                 }
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DbContextclass db = new DbContextclass();
+            var c = from p in db.document
+                    where p.UserName == Global.username
+                    select p;
+            var final = from p in c
+                        where p.Name.Contains(textBox1.Text)
+                        select p;
+            dataGridView1.DataSource = final.ToList();
         }
 
         //private void dataGridView1_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
@@ -164,8 +191,8 @@ namespace DocumentMangement
         //    }
         //}
 
-        
 
-        
+
+
     }
 }

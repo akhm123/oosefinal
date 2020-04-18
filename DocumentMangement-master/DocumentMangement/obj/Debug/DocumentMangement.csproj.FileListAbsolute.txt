@@ -306,7 +306,6 @@ C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\Do
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.DocumentUpload.resources
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.DownloadDoc.resources
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Form1.resources
-C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Migrations.init.resources
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Properties.Resources.resources
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Registration.resources
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.viewallfile.resources
@@ -314,3 +313,4 @@ C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\Do
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.csproj.CopyComplete
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.exe
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.pdb
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Migrations.init.resources
