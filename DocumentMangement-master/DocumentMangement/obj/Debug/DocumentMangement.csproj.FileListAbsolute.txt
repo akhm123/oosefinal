@@ -314,3 +314,10 @@ C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\Do
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.exe
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.pdb
 C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Migrations.init.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Migrations.init1.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.DisplayUser.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.Migrations.init2.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.AddSubscription.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.DisplaySubscriptions.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.AdminHome.resources
+C:\Users\Admin\Downloads\DocumentMangement-master\DocumentMangement\obj\Debug\DocumentMangement.PurchaseSubscription.resources

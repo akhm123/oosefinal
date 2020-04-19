@@ -18,6 +18,8 @@ namespace DocumentMangement.Models
 
         public virtual DbSet<User> users { get; set; }
         public virtual DbSet<Document> document { get; set; }
+        public virtual DbSet<Subscription> subscription { get; set; }
 
+        public virtual DbSet<UserSubscription> UserSubscription { get; set; }
     }
 }

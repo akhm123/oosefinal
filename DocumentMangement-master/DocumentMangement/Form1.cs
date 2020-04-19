@@ -25,23 +25,33 @@ namespace DocumentMangement
             User user = new User();
             user.UserName = textBox1.Text.ToString();
             user.Password = textBox2.Text.ToString();
-            var k = db.users.Where((s) => s.UserName == user.UserName && s.Password == user.Password)
-                .FirstOrDefault();
 
-            if (k == null)
-                MessageBox.Show("invalid login credntials");
-            else
+
+            if (user.UserName == "admin" && user.Password == "admin")
             {
-                //textBox1.Text = user.Name;
-                Global.username = user.UserName;
-                //db.users.Add(user);
-                //db.SaveChanges();
-                // DocumentUpload obj1 = new DocumentUpload();
-                viewallfile obj1 = new viewallfile();
-                obj1.Show();
+                AdminHome u = new AdminHome();
+                u.Show();
                 this.Hide();
             }
+            else
+            {
+                var k = db.users.Where((s) => s.UserName == user.UserName && s.Password == user.Password)
+                    .FirstOrDefault();
 
+                if (k == null)
+                    MessageBox.Show("invalid login credntials");
+                else
+                {
+                    //textBox1.Text = user.Name;
+                    Global.username = user.UserName;
+                    //db.users.Add(user);
+                    //db.SaveChanges();
+                    // DocumentUpload obj1 = new DocumentUpload();
+                    viewallfile obj1 = new viewallfile();
+                    obj1.Show();
+                    this.Hide();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

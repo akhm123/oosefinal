@@ -15,7 +15,7 @@ namespace DocumentMangement
         public CostEstmation()
         {
             InitializeComponent();
-            //button1.Hide();
+            button1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,17 +33,23 @@ namespace DocumentMangement
             {
                 label4.Text = "We recommend you to use our gold plan";
 
+                button1.Show();
             }
             else
             {
                 label4.Text = "We recommend you to use our platinum plan";
+                button1.Show();
             }
-            //button1.Show();
+            //
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+       
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PurchaseSubscription p = new PurchaseSubscription();
+            p.Show();
+            this.Hide();
         }
     }
 }

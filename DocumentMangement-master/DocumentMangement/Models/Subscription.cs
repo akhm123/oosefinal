@@ -12,5 +12,7 @@ namespace DocumentMangement.Models
         public string SubscriptionName { get; set; }
         public string DurationOfSubscripition { get; set; }
         public int Price { get; set; }
+
+        public string details { get; set; }
     }
 }

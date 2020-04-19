@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -63,10 +64,24 @@ namespace DocumentMangement
 
             if(c==0)
             {
-                Global.link = senderGrid.Rows[r].Cells[5].Value.ToString();
-                label1.Text = Global.link;
+                Global.link = senderGrid.Rows[r].Cells[6].Value.ToString();
+             //   label1.Text = Global.link;
                 DownloadDoc obj = new DownloadDoc();
                 obj.Show();
+                this.Hide();
+            }
+            else if(c==1)
+            {
+                DbContextclass db = new DbContextclass();
+                string l=senderGrid.Rows[r].Cells[6].Value.ToString();
+             //   label1.Text = l;
+               // var employer = new Document{ UserName=Global.username,Url=l};
+                var record = db.document.Where(x=> x.UserName==Global.username && x.Url==l).FirstOrDefault();
+                db.document.Remove(record);
+                db.SaveChanges();
+                File.Delete(l);
+                viewallfile v = new viewallfile();
+                v.Show();
                 this.Hide();
             }
 

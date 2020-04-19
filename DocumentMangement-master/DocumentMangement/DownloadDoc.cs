@@ -19,7 +19,7 @@ namespace DocumentMangement
           
 
             InitializeComponent();
-            label2.Hide();
+            label2.Show();
             progressBar1.Hide();
         }
         WebClient client;

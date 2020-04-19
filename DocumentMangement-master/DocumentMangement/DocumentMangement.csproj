@@ -120,11 +120,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubscription.Designer.cs">
+      <DependentUpon>AddSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="CostEstmation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CostEstmation.Designer.cs">
       <DependentUpon>CostEstmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplaySubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplaySubscriptions.Designer.cs">
+      <DependentUpon>DisplaySubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayUser.Designer.cs">
+      <DependentUpon>DisplayUser.cs</DependentUpon>
     </Compile>
     <Compile Include="DocumentUpload.cs">
       <SubType>Form</SubType>
@@ -149,13 +173,28 @@
     <Compile Include="Migrations\202004181539448_init.designer.cs">
       <DependentUpon>202004181539448_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004190720364_init1.cs" />
+    <Compile Include="Migrations\202004190720364_init1.designer.cs">
+      <DependentUpon>202004190720364_init1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004190834161_init2.cs" />
+    <Compile Include="Migrations\202004190834161_init2.designer.cs">
+      <DependentUpon>202004190834161_init2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContextclass.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\Subscription.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSubscription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseSubscription.Designer.cs">
+      <DependentUpon>PurchaseSubscription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,8 +207,20 @@
     <Compile Include="viewallfile.Designer.cs">
       <DependentUpon>viewallfile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddSubscription.resx">
+      <DependentUpon>AddSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CostEstmation.resx">
       <DependentUpon>CostEstmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplaySubscriptions.resx">
+      <DependentUpon>DisplaySubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayUser.resx">
+      <DependentUpon>DisplayUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DocumentUpload.resx">
       <DependentUpon>DocumentUpload.cs</DependentUpon>
@@ -183,6 +234,12 @@
     <EmbeddedResource Include="Migrations\202004181539448_init.resx">
       <DependentUpon>202004181539448_init.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004190720364_init1.resx">
+      <DependentUpon>202004190720364_init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004190834161_init2.resx">
+      <DependentUpon>202004190834161_init2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -192,6 +249,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PurchaseSubscription.resx">
+      <DependentUpon>PurchaseSubscription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documents\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
